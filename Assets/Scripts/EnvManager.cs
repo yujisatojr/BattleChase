@@ -45,8 +45,8 @@ public class EnvManager : MonoBehaviour
         return health;
     }
 
-    public int getScore()
+    /*public int getScore()
     {
         return score;
-    }
+    }*/
 }

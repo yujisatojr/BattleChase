@@ -16,7 +16,7 @@ public class CameraFollow : MonoBehaviour
      [SerializeField]
      private bool lookAt = true;
  
-     private void Update()
+     private void LateUpdate()
      {
          Refresh();
      }
