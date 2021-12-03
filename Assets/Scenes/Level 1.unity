@@ -207,7 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 321937928}
-  offsetPosition: {x: 0, y: 4, z: -8}
+  offset: {x: 0, y: 4, z: -8}
+  smoothSpeed: 0.125
   offsetPositionSpace: 1
   lookAt: 1
 --- !u!20 &5615306
@@ -47692,7 +47693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1174008632}
-  offsetPosition: {x: 0, y: 4, z: -8}
+  offset: {x: 0, y: 4, z: -8}
+  smoothSpeed: 0.125
   offsetPositionSpace: 1
   lookAt: 1
 --- !u!124 &1713730401
