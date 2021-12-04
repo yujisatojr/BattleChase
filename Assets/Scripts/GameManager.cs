@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject levelText;
     public float timeValue = 120;
     public Text timerText;
+
+    public GameObject resultPane_1;
+    public GameObject resultPane_2;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +36,16 @@ public class GameManager : MonoBehaviour
         }
         */
 
-        if (EnvManager.Instance.health <= 0 && firstHealth != false)
+        if (EnvManager.Instance.health_1 <= 0 && firstHealth != false)
         {
             firstHealth = false;
-            SceneManager.LoadScene(4);
+            resultPane_1.SetActive(true);
+        }
+
+        if (EnvManager.Instance.health_2 <= 0 && firstHealth != false)
+        {
+            firstHealth = false;
+            resultPane_2.SetActive(true);
         }
 
         if (timeValue > 0)
@@ -52,7 +61,14 @@ public class GameManager : MonoBehaviour
 
         if (timeValue < 0)
         {
-            SceneManager.LoadScene(4);
+            if (EnvManager.Instance.score_1 < EnvManager.Instance.score_2)
+            {
+                resultPane_1.SetActive(true);
+            }
+            else
+            {
+                resultPane_2.SetActive(true);
+            }
         }
     }
 

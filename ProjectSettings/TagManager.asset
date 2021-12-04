@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cone
+  - Bullet
+  - Trophy
+  - Goal
   layers:
   - Default
   - TransparentFX

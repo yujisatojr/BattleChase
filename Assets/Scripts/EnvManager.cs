@@ -8,9 +8,13 @@ using UnityEngine.UI;
 public class EnvManager : MonoBehaviour
 {
     public static EnvManager Instance;
-    private int maxHealth = 300;
-    public int health;
-    public int score;
+    private int maxHealth = 1000;
+    public int health_1;
+    public int health_2;
+    public int score_1;
+    public int score_2;
+
+    public float soundVolume;
 
     private void Awake()
     {
@@ -27,17 +31,19 @@ public class EnvManager : MonoBehaviour
 
     private void Start()
     {
-        health = maxHealth;
+        health_1 = maxHealth;
+        health_2 = maxHealth;
+        soundVolume = 1;
     }
 
     private void Update()
     {
 
     }
-
+    /*
     public void setHealth(int damage)
     {
-        health += damage;
+        health_1 += damage;
     }
 
     public int getHealth()
@@ -45,7 +51,7 @@ public class EnvManager : MonoBehaviour
         return health;
     }
 
-    /*public int getScore()
+    public int getScore()
     {
         return score;
     }*/

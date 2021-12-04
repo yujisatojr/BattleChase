@@ -5,17 +5,24 @@ using UnityEngine.UI;
 
 public class UpdateScore : MonoBehaviour
 {
-    public Text scoreText;
+    public Text scoreText_1;
+    public Text scoreText_2;
 
     private void Update()
     {
-        scoreText.text = "Score: " + EnvManager.Instance.score;
-
+        scoreText_1.text = "Score: " + EnvManager.Instance.score_1;
+        scoreText_2.text = "Score: " + EnvManager.Instance.score_2;
     }
     // Start is called before the first frame update
-    public void updateScore()
+    public void updateScoreOne()
     {
-        EnvManager.Instance.score += 30;
-        scoreText.text = "Score: " + EnvManager.Instance.score;
+        EnvManager.Instance.score_1 += 30;
+        scoreText_1.text = "Score: " + EnvManager.Instance.score_1;
+    }
+
+    public void updateScoreTwo()
+    {
+        EnvManager.Instance.score_2 += 30;
+        scoreText_2.text = "Score: " + EnvManager.Instance.score_2;
     }
 }
