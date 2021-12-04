@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int highScore = 100;
+    public int highScore;
 
     public void SavePlayer()
     {
@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public void LoadPlayer()
     {
         PlayerData data = SaveSystem.LoadPlayer();
-        highScore = data.highScore;
+        //highScore = data.highScore;
+        EnvManager.Instance.highestScore = data.highScore;
+        EnvManager.Instance.soundVolume = data.volume;
     }
 }

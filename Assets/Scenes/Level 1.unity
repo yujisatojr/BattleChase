@@ -25391,6 +25391,7 @@ MonoBehaviour:
   health_2: 0
   score_1: 0
   score_2: 0
+  highestScore: 0
   soundVolume: 0
 --- !u!4 &689021381
 Transform:
@@ -57668,6 +57669,10 @@ PrefabInstance:
     - target: {fileID: 2526462455471795834, guid: 8f38ce9e2ab6449e98f602586d2e3bf9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.238
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526462455472091726, guid: 8f38ce9e2ab6449e98f602586d2e3bf9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2526462455472091738, guid: 8f38ce9e2ab6449e98f602586d2e3bf9, type: 3}
       propertyPath: m_Name

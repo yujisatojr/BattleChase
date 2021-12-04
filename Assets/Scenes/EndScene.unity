@@ -249,6 +249,8 @@ MonoBehaviour:
   health_2: 0
   score_1: 0
   score_2: 0
+  highestScore: 0
+  soundVolume: 0
 --- !u!4 &70016381
 Transform:
   m_ObjectHideFlags: 0
@@ -513,7 +515,7 @@ GameObject:
   - component: {fileID: 1405385234}
   - component: {fileID: 1405385236}
   m_Layer: 5
-  m_Name: Player 1
+  m_Name: Player 1 Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +533,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1564412446}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -687,10 +689,10 @@ RectTransform:
   m_Children:
   - {fileID: 926224218}
   - {fileID: 149147749}
-  - {fileID: 1763674758}
   - {fileID: 1405385233}
   - {fileID: 1581399466}
   - {fileID: 2108578982}
+  - {fileID: 1763674758}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -711,7 +713,7 @@ GameObject:
   - component: {fileID: 1581399468}
   - component: {fileID: 1581399467}
   m_Layer: 5
-  m_Name: Player 2
+  m_Name: Player 2 Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,7 +731,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1564412446}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -791,8 +793,9 @@ GameObject:
   - component: {fileID: 1763674760}
   - component: {fileID: 1763674759}
   - component: {fileID: 1763674762}
+  - component: {fileID: 1763674763}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -811,7 +814,7 @@ RectTransform:
   m_Children:
   - {fileID: 2113932315}
   m_Father: {fileID: 1564412446}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -874,6 +877,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1763674763}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: SavePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1763674760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,6 +939,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85653bd5fd3a44daf9b21882a3f21cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1763674763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763674757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797b15edde81e4ee3a9b80919568a8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScore: 0
 --- !u!1 &2085015499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1029,7 @@ GameObject:
   - component: {fileID: 2108578982}
   - component: {fileID: 2108578984}
   - component: {fileID: 2108578983}
+  - component: {fileID: 2108578985}
   m_Layer: 5
   m_Name: High Score
   m_TagString: Untagged
@@ -1020,7 +1049,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1564412446}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1069,6 +1098,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108578981}
   m_CullTransparentMesh: 1
+--- !u!114 &2108578985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108578981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81102536f921c470ea21d5ce4979fa60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScoreText: {fileID: 2108578983}
 --- !u!1 &2113932314
 GameObject:
   m_ObjectHideFlags: 0

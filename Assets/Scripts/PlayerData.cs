@@ -6,9 +6,12 @@ using UnityEngine;
 public class PlayerData
 {
     public int highScore;
+    public float volume;
 
     public PlayerData(Player player)
     {
-        highScore = player.highScore;
+        //highScore = player.highScore;
+        highScore = EnvManager.Instance.highestScore;
+        volume = EnvManager.Instance.soundVolume;
     }
 }

@@ -39,12 +39,14 @@ public class GameManager : MonoBehaviour
         if (EnvManager.Instance.health_1 <= 0 && firstHealth != false)
         {
             firstHealth = false;
+            EnvManager.Instance.score_2 += 500;
             resultPane_1.SetActive(true);
         }
 
         if (EnvManager.Instance.health_2 <= 0 && firstHealth != false)
         {
             firstHealth = false;
+            EnvManager.Instance.score_1 += 500;
             resultPane_2.SetActive(true);
         }
 

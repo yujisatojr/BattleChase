@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 428566102}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.49641258, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366753, g: 0.48427093, b: 0.5645238, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -273,6 +273,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20502092}
   m_CullTransparentMesh: 1
+--- !u!1 &62893492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62893494}
+  - component: {fileID: 62893493}
+  m_Layer: 0
+  m_Name: Calculator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &62893493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62893492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a42f71afd6a4ca6b1084d7b5f0ca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &62893494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62893492}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 452.5, y: 205.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &67857274
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +868,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 62893493}
+        m_TargetAssemblyTypeName: CalculateHighScore, Assembly-CSharp
+        m_MethodName: calculateHighScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2731,6 +2786,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 62893493}
+        m_TargetAssemblyTypeName: CalculateHighScore, Assembly-CSharp
+        m_MethodName: calculateHighScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1501539521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2934,6 +3001,7 @@ MonoBehaviour:
   health_2: 0
   score_1: 0
   score_2: 0
+  highestScore: 0
   soundVolume: 0
 --- !u!4 &1816133709
 Transform:
@@ -3346,23 +3414,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8951106949834611719, guid: e9e4454f6e7fd4273b512276f6fbab16, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6672435
+      value: 0.54900056
       objectReference: {fileID: 0}
     - target: {fileID: 8951106949834611719, guid: e9e4454f6e7fd4273b512276f6fbab16, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.36454013
+      value: 0.54900056
       objectReference: {fileID: 0}
     - target: {fileID: 8951106949834611719, guid: e9e4454f6e7fd4273b512276f6fbab16, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.60739905
+      value: -0.4456438
       objectReference: {fileID: 0}
     - target: {fileID: 8951106949834611719, guid: e9e4454f6e7fd4273b512276f6fbab16, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.23013741
+      value: 0.4456438
       objectReference: {fileID: 0}
     - target: {fileID: 8951106949834611719, guid: e9e4454f6e7fd4273b512276f6fbab16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 50
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8951106949834611719, guid: e9e4454f6e7fd4273b512276f6fbab16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

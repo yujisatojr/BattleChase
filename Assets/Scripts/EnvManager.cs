@@ -14,6 +14,8 @@ public class EnvManager : MonoBehaviour
     public int score_1;
     public int score_2;
 
+    public int highestScore;
+
     public float soundVolume;
 
     private void Awake()
