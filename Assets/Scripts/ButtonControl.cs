@@ -10,8 +10,6 @@ public class ButtonControl : MonoBehaviour
     {
         EnvManager.Instance.health_1 = maxHealth;
         EnvManager.Instance.health_2 = maxHealth;
-        //EnvManager.Instance.score_1 = 0;
-        //EnvManager.Instance.score_2 = 0;
         SceneManager.LoadScene(level);
     }
 }

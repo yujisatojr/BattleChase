@@ -54,23 +54,19 @@ public class CarController : MonoBehaviour
     {
         if (playerNum == 1)
         {
-            //float forwardInput = Input.GetAxis("Vertical");
-            //transform.Translate(-focalPoint.transform.forward * speed * forwardInput);
             horizontalInput = Input.GetAxis(HORIZONTAL);
             verticalInput = Input.GetAxis(VERTICAL);
-        } else {
+        }
+        else
+        {
             horizontalInput = Input.GetAxis(HORIZONTAL2);
             verticalInput = Input.GetAxis(VERTICAL2);
-            //transform.Translate(-focalPoint.transform.forward * speed * forwardInput);
         }
-        //horizontalInput = Input.GetAxis(HORIZONTAL);
-        //verticalInput = Input.GetAxis(VERTICAL);
         isBreaking = Input.GetKey(KeyCode.Space);
     }
 
     private void HandleMotor()
     {
-        //Debug.Log(frontLeftWheelCollider.motorTorque);
         frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
         frontRightWheelCollider.motorTorque = verticalInput * motorForce;
         currentbreakForce = isBreaking ? breakForce : 0f;

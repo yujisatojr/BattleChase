@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
 
     bool firstScore = true;
     bool firstHealth = true;
-    //public GameObject bossPrefabs;
-    //public int bossHealth = 30;
 
     public GameObject levelText;
     public float timeValue = 120;
@@ -23,21 +21,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine("ShowLevel", 1);
-        //StartCoroutine("SpawnBoss", 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (EnvManager.Instance.score > 200 && firstScore != false)
-        {
-            firstScore = false;
-            Vector3 spawnPos = new Vector3(0, 17, 0);
-            Instantiate(bossPrefabs, spawnPos, bossPrefabs.transform.rotation);
-        }
-        */
-
         if (EnvManager.Instance.health_1 <= 0 && firstHealth != false)
         {
             isGameActive = false;
@@ -98,11 +86,4 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         levelText.SetActive(false);
     }
-
-    /*IEnumerator SpawnBoss()
-    {
-        yield return new WaitForSeconds(20);
-        Vector3 spawnPos = new Vector3(0, 17, 0);
-        Instantiate(bossPrefabs, spawnPos, bossPrefabs.transform.rotation);
-    }*/
 }

@@ -29,7 +29,6 @@ public class CollisionManager : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Cone"))
             {
-                //Debug.Log("Collision with cone");
                 EnvManager.Instance.health_1 -= 30;
                 EnvManager.Instance.score_2 += 30;
             }
@@ -37,7 +36,6 @@ public class CollisionManager : MonoBehaviour
             {
                 gameManager.isGameActive = false;
                 resultPane_2.SetActive(true);
-                //Debug.Log("Winner!");
 
             }
         }
@@ -48,7 +46,6 @@ public class CollisionManager : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 Instantiate(explosion, transform.position, transform.rotation);
-                //Debug.Log("Collision with bullet");
                 EnvManager.Instance.health_2 -= 30;
                 EnvManager.Instance.score_1 += 30;
             }
@@ -56,7 +53,6 @@ public class CollisionManager : MonoBehaviour
             {
                 gameManager.isGameActive = false;
                 resultPane_1.SetActive(true);
-                //Debug.Log("Winner!");
             }
         }
     }

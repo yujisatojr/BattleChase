@@ -15,7 +15,6 @@ public class EnvManager : MonoBehaviour
     public int score_2;
 
     public int highestScore;
-
     public float soundVolume;
 
     private void Awake()
@@ -29,7 +28,6 @@ public class EnvManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
- 
 
     private void Start()
     {
@@ -37,24 +35,4 @@ public class EnvManager : MonoBehaviour
         health_2 = maxHealth;
         soundVolume = 1;
     }
-
-    private void Update()
-    {
-
-    }
-    /*
-    public void setHealth(int damage)
-    {
-        health_1 += damage;
-    }
-
-    public int getHealth()
-    {
-        return health;
-    }
-
-    public int getScore()
-    {
-        return score;
-    }*/
 }

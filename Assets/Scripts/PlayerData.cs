@@ -10,7 +10,6 @@ public class PlayerData
 
     public PlayerData(Player player)
     {
-        //highScore = player.highScore;
         highScore = EnvManager.Instance.highestScore;
         volume = EnvManager.Instance.soundVolume;
     }

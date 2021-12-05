@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     public void LoadPlayer()
     {
         PlayerData data = SaveSystem.LoadPlayer();
-        //highScore = data.highScore;
         EnvManager.Instance.highestScore = data.highScore;
         EnvManager.Instance.soundVolume = data.volume;
     }
