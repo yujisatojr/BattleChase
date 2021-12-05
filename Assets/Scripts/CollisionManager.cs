@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
+    private GameManager gameManager;
+
     public int playerNum;
     public GameObject resultPane_1;
     public GameObject resultPane_2;
@@ -11,7 +13,7 @@ public class CollisionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class CollisionManager : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Goal"))
             {
+                gameManager.isGameActive = false;
                 resultPane_2.SetActive(true);
                 //Debug.Log("Winner!");
 
@@ -51,6 +54,7 @@ public class CollisionManager : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Goal"))
             {
+                gameManager.isGameActive = false;
                 resultPane_1.SetActive(true);
                 //Debug.Log("Winner!");
             }

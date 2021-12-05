@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    private GameManager gameManager;
+    
     private const string HORIZONTAL = "Horizontal";
     private const string HORIZONTAL2 = "Horizontal2";
     private const string VERTICAL = "Vertical";
@@ -31,12 +33,20 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     private void FixedUpdate()
     {
-        GetInput();
-        HandleMotor();
-        HandleSteering();
-        UpdateWheels();
+        if (gameManager.isGameActive)
+        {
+            GetInput();
+            HandleMotor();
+            HandleSteering();
+            UpdateWheels();
+        }
     }
 
 

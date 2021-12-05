@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public bool isGameActive = true;
+
     bool firstScore = true;
     bool firstHealth = true;
     //public GameObject bossPrefabs;
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
 
         if (EnvManager.Instance.health_1 <= 0 && firstHealth != false)
         {
+            isGameActive = false;
             firstHealth = false;
             EnvManager.Instance.score_2 += 500;
             resultPane_1.SetActive(true);
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour
 
         if (EnvManager.Instance.health_2 <= 0 && firstHealth != false)
         {
+            isGameActive = false;
             firstHealth = false;
             EnvManager.Instance.score_1 += 500;
             resultPane_2.SetActive(true);
@@ -63,6 +67,7 @@ public class GameManager : MonoBehaviour
 
         if (timeValue < 0)
         {
+            isGameActive = false;
             if (EnvManager.Instance.score_1 < EnvManager.Instance.score_2)
             {
                 resultPane_1.SetActive(true);

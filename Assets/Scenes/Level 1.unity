@@ -22242,6 +22242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1997d0c16cafb4d8d9b7ebe58191b2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameActive: 1
   levelText: {fileID: 1533466954}
   timeValue: 120
   timerText: {fileID: 1540043472}
@@ -27228,8 +27229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -116.9, y: 69}
-  m_SizeDelta: {x: 200, y: 120}
+  m_AnchoredPosition: {x: -180, y: 130}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796851211
 MonoBehaviour:
