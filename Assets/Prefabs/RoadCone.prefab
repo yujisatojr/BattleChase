@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4229858614327844058}
   - component: {fileID: 74112916857332983}
   m_Layer: 0
-  m_Name: Road Cone
+  m_Name: RoadCone
   m_TagString: Cone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
