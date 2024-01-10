@@ -1,7 +1,7 @@
 # High Speed Chase 3D
 
 ## Overview
-Engage in thrilling head-to-head races with a friend using a single keyboard. The game is available for play at [itch.io](https://yujisatojr.itch.io/highspeedchase). This game is developed by Yuji Sato using Unity and C#.
+Engage in thrilling head-to-head races with a friend using a single keyboard. This game is developed by Yuji Sato using Unity and C#.
 
 ![High Speed Chase Gameplay](https://my-aws-assets.s3.us-west-2.amazonaws.com/gameplay_highspeedchase.png)
 
@@ -15,7 +15,7 @@ Engage in thrilling head-to-head races with a friend using a single keyboard. Th
 - **Victory Conditions:** The first player to either defeat the opponent or reach the goal line wins the game.
 
 ## Getting Started
-1. Navigate to [Itch.io website](https://yujisatojr.itch.io/highspeedchase) to download the latest version of the game.
+Navigate to [Itch.io website](https://yujisatojr.itch.io/highspeedchase) and press the "Run game" button.
 
 ## Controls
 - **Player 1:**
